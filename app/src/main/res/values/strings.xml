@@ -6,4 +6,6 @@
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="or_register">Or register</string>
+    <string name="register">Register</string>
+    <string name="age">Age</string>
 </resources>

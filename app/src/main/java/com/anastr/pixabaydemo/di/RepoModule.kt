@@ -1,7 +1,9 @@
 package com.anastr.pixabaydemo.di
 
 import com.anastr.pixabaydemo.data.repository.FakeLoginRepository
+import com.anastr.pixabaydemo.data.repository.FakeRegisterRepository
 import com.anastr.pixabaydemo.domain.repository.LoginRepository
+import com.anastr.pixabaydemo.domain.repository.RegisterRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -17,4 +19,10 @@ abstract class RepoModule {
     abstract fun bindLoginRepository(
         fakeLoginRepository: FakeLoginRepository
     ): LoginRepository
+
+    @Binds
+    @Singleton
+    abstract fun bindRegisterRepository(
+        fakeLoginRepository: FakeRegisterRepository
+    ): RegisterRepository
 }
