@@ -1,8 +1,11 @@
 package com.anastr.pixabaydemo.data.model
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+@Parcelize
 @Serializable
 data class ImageInfo(
     @SerialName("id") val id: String,
@@ -11,10 +14,10 @@ data class ImageInfo(
     @SerialName("tags") val tags: String,
     @SerialName("user") val userName: String,
     @SerialName("userImageURL") val userImageUrl: String,
-    @SerialName("imageSize") val imageSize: String,
+    @SerialName("imageSize") val imageSize: Int,
     @SerialName("type") val type: String,
-    @SerialName("views") val views: String,
-    @SerialName("likes") val likes: String,
-    @SerialName("comments") val comments: String,
-    @SerialName("downloads") val downloads: String,
-)
+    @SerialName("views") val views: Int,
+    @SerialName("likes") val likes: Int,
+    @SerialName("comments") val comments: Int,
+    @SerialName("downloads") val downloads: Int,
+): Parcelable

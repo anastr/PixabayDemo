@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.anastr.pixabaydemo.databinding.FragmentHomeBinding
 import com.anastr.pixabaydemo.state.CallState
@@ -40,7 +41,8 @@ class HomeFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         imagesAdapter.setOnItemClickListener { imageInfo ->
-            //
+            val direction = HomeFragmentDirections.actionHomeFragmentToImageDetailFragment(imageInfo)
+            findNavController().navigate(direction)
         }
         binding.recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
         binding.recyclerView.adapter = imagesAdapter

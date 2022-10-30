@@ -34,5 +34,18 @@
         android:id="@+id/homeFragment"
         android:name="com.anastr.pixabaydemo.ui.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_imageDetailFragment"
+            app:destination="@id/imageDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageDetailFragment"
+        android:name="com.anastr.pixabaydemo.ui.ImageDetailFragment"
+        android:label="fragment_image_detail"
+        tools:layout="@layout/fragment_image_detail" >
+        <argument
+            android:name="imageInfo"
+            app:argType="com.anastr.pixabaydemo.data.model.ImageInfo" />
+    </fragment>
 </navigation>
