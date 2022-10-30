@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.anastr.pixabaydemo.ui.LoginFragment"
+        android:name="com.anastr.pixabaydemo.ui.fragments.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.anastr.pixabaydemo.ui.RegisterFragment"
+        android:name="com.anastr.pixabaydemo.ui.fragments.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" >
         <action
@@ -44,7 +44,7 @@
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.anastr.pixabaydemo.ui.HomeFragment"
+        android:name="com.anastr.pixabaydemo.ui.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -57,7 +57,7 @@
     </fragment>
     <fragment
         android:id="@+id/imageDetailFragment"
-        android:name="com.anastr.pixabaydemo.ui.ImageDetailFragment"
+        android:name="com.anastr.pixabaydemo.ui.fragments.ImageDetailFragment"
         android:label="fragment_image_detail"
         tools:layout="@layout/fragment_image_detail" >
         <argument

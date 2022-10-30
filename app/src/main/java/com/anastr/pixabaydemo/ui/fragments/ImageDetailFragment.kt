@@ -1,4 +1,4 @@
-package com.anastr.pixabaydemo.ui
+package com.anastr.pixabaydemo.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

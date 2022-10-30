@@ -13,7 +13,6 @@ import okhttp3.MediaType.Companion.toMediaType
 import retrofit2.Retrofit
 import javax.inject.Singleton
 
-
 @Module
 @InstallIn(SingletonComponent::class)
 class ApiModule {
@@ -21,11 +20,9 @@ class ApiModule {
     @OptIn(ExperimentalSerializationApi::class)
     @Provides
     @Singleton
-    fun provideRetrofit(): Retrofit {
-        val json = Json {
-            ignoreUnknownKeys = true
-            isLenient = true
-        }
+    fun provideRetrofit(
+        json: Json,
+    ): Retrofit {
         val contentType = "application/json".toMediaType()
         return Retrofit.Builder()
             .baseUrl(Constant.PIXABAY_BASE_URL)

@@ -6,11 +6,12 @@ import com.anastr.pixabaydemo.data.model.ImageInfo
 
 class ImagesDiffCallback(private val adapter: RecyclerView.Adapter<*>): DiffUtil.Callback() {
 
-    private val oldList = listOf<ImageInfo>()
+    private var oldList = listOf<ImageInfo>()
     var currentList = listOf<ImageInfo>()
         private set
 
     fun updateList(newList: List<ImageInfo>) {
+        oldList = currentList
         currentList = newList
         DiffUtil.calculateDiff(this).dispatchUpdatesTo(adapter)
     }
