@@ -9,6 +9,8 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
+import com.anastr.pixabaydemo.R
 import com.anastr.pixabaydemo.databinding.FragmentRegisterBinding
 import com.anastr.pixabaydemo.utils.onTextChanged
 import com.anastr.pixabaydemo.viewmodel.RegisterViewModel
@@ -79,8 +81,8 @@ class RegisterFragment: Fragment() {
                     }
                 }
                 launch {
-                    viewModel.registerUserFlow.collect { user ->
-//                        findNavController().
+                    viewModel.registerUserFlow.collect {
+                        findNavController().navigate(R.id.action_registerFragment_to_homeFragment)
                     }
                 }
             }

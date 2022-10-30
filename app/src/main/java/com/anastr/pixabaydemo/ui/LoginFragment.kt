@@ -77,8 +77,8 @@ class LoginFragment: Fragment() {
                     }
                 }
                 launch {
-                    viewModel.loginUserFlow.collect { user ->
-//                        findNavController().
+                    viewModel.loginUserFlow.collect {
+                        findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
                     }
                 }
             }
